@@ -24,6 +24,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildFeatures {
+                viewBinding = true
+            }
         }
     }
     compileOptions {
@@ -36,6 +39,8 @@ android {
 }
 
 dependencies {
+
+    implementation ("androidx.sqlite:sqlite-ktx:2.4.0")
 
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
