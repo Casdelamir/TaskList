@@ -7,18 +7,30 @@
     tools:context=".activity.MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
     <Button
         android:id="@+id/button_create"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create New"
+        android:text="Create New Task"
         android:layout_gravity="bottom|end"
         />
+        <Button
+            android:id="@+id/button_create_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Category"
+            android:layout_gravity="bottom|start"
+        />
+        </FrameLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

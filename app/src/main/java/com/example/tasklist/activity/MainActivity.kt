@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.tasklist.data.Category
+import com.example.tasklist.data.CategoryDAO
 import com.example.tasklist.data.Task
 import com.example.tasklist.data.TaskDAO
 import com.example.tasklist.databinding.ActivityMainBinding
@@ -16,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var adapter: TaskRecyclerViewAdapter
     lateinit var taskList: List<Task>
     lateinit var taskDAO: TaskDAO
+    lateinit var categoryDAO: CategoryDAO
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -23,31 +26,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         taskDAO = TaskDAO(this)
-
-        var task = Task(-1, "Comprar", "zdfvnasoivaeukovhnerkjvnerkjnvojernverj", false)
-
-        taskDAO.insert(task)
-
-        Log.i("DATABASE", task.toString())
-
-        task.done = true
-
-        taskDAO.update(task)
-
-        Log.i("DATABASE", task.toString())
-
-        task = taskDAO.find(task.id)!!
-
-        Log.i("DATABASE", task.toString())
-
-        //taskDAO.delete(task)
-
-        val taskList = taskDAO.findAll()
-
-        Log.i("DATABASE", taskList.toString())
+        categoryDAO = CategoryDAO(this)
 
         binding.buttonCreate.setOnClickListener() {
             val intent = Intent(this, TaskDetailsActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.buttonCreateCategory.setOnClickListener() {
+            val intent = Intent(this, CreateCategoryActivity::class.java)
             startActivity(intent)
         }
 

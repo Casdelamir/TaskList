@@ -36,6 +36,7 @@ class TaskRecyclerViewAdapter(private var taskList: List<Task>, private val onCl
         ) {
             binder.taskName.text = task.name
             binder.checkbox.isChecked = task.done
+            binder.textCategory.text = task.category?.name
             binder.checkbox.setOnCheckedChangeListener { checkbox, _ ->
                 if (checkbox.isPressed) {
                     onClickCheckBoxListener(task)
