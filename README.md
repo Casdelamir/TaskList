@@ -4,24 +4,28 @@ Kotlin app for creating and managing daily tasks. Clean list based interface foc
 
 ## Features
 - Add new task
+- Edit task
+- Delete task
+- Add new category
 - View and manage task list
 - Basic CRUD operations
 
 ## Tech Stack
-- **Languadge**: Kotlin
+- **Language**: Kotlin
 - **UI**: XML layouts + RecycleView
-- **Persistance**: Local storage (SQLite database with SQLiteOpenHelper API)
+- **Persistence**: Local storage (SQLite database with SQLiteOpenHelper API)
 
-  This project demostrates practical app flowslike cart managment (Recycle views) and dinamic pricing.
+This app is great example of SQLite data base.
 
 ## Screenshots
 <p float="left">
-    <img src="screenshots/home_categories.png" width="200" />
-    <img src="screenshots/home_categories.png" width="200" />
-    <img src="screenshots/home_categories.png" width="200" />
+    <img src="app/screenshots/ListOfTasks.png" width="410"  alt="List"/>
+    <img src="app/screenshots/NewTask.png" width="409"  alt="Task"/>
+    <img src="app/screenshots/NewCategory.png" width="407"  alt="Category"/>
+    <img src="app/screenshots/EditTask.png" width="408"  alt="Edit"/>
 </p>
 
 ## Setup
 1. Clone repo
 2. Open in Android Studio
-3. Sync Gradle -> Run on emulator/device(min SDK 21)
+3. Sync Gradle -> Run on emulator/device (min SDK 21)

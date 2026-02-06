@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var taskList: List<Task>
     lateinit var taskDAO: TaskDAO
     lateinit var categoryDAO: CategoryDAO
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -40,9 +41,6 @@ class MainActivity : AppCompatActivity() {
 
         adapter = TaskRecyclerViewAdapter(taskDAO.findAll(),
             { task ->
-                navigateToTaskDetails(task)
-            },
-            { task ->
                 if(task.done) {
                     task.done = false
                     taskDAO.update(task)
@@ -56,6 +54,9 @@ class MainActivity : AppCompatActivity() {
             {
                 task -> taskDAO.delete(task)
                 loadData()
+            },
+            {
+                navigateToTaskDetails(it)
             }
         )
 

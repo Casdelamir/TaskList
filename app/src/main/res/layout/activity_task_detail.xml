@@ -8,32 +8,49 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_margin="15dp"
         android:gravity="center">
-        <EditText
-            android:id="@+id/categoryEditText"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Category"/>
+            android:layout_margin="40.dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="35.dp"
+            android:text="Task" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.dp"
+            android:text="Select category: ">
+        </TextView>
+        <Spinner
+            android:id="@+id/my_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+
         <EditText
             android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10.dp"
             android:hint="Name"/>
         <EditText
             android:id="@+id/descriptionEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10.dp"
             android:hint="Que hay que hacer?"/>
 
         <Button
             android:id="@+id/saveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:text="Guardar"/>
+            android:layout_margin="10.dp"
+            android:text="Save"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

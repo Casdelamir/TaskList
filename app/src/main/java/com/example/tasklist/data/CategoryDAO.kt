@@ -5,6 +5,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.provider.BaseColumns
 import android.util.Log
+import androidx.core.database.getIntOrNull
 import com.example.tasklist.utils.DatabaseManager
 
 class CategoryDAO(context: Context) {
@@ -94,13 +95,12 @@ class CategoryDAO(context: Context) {
         var category: Category? = null
 
         if (cursor.moveToNext()) {
-            val id = cursor.getInt(cursor.getColumnIndex(BaseColumns._ID))
+            val id = cursor.getIntOrNull(cursor.getColumnIndex(BaseColumns._ID))
             val name = cursor.getString(cursor.getColumnIndex(Category.COLUMN_NAME_NAME))
             //Log.i("DATABASE", "$id -> Category: $name")
-
+            if (id == null) return null
             category = Category(id, name)
         }
-
         cursor.close()
         db.close()
 

@@ -8,20 +8,31 @@
     tools:ignore="MissingDefaultResource">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_margin="15dp"
         android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40.dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="35.dp"
+            android:text="Create new category:" />
+
         <EditText
             android:id="@+id/categoryEditTextName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Category Name"/>
+
         <Button
             android:id="@+id/saveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
+            android:layout_margin="15.dp"
             android:text="Save"/>
     </LinearLayout>
 
