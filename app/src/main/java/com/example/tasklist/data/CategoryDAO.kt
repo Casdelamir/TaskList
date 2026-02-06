@@ -26,26 +26,26 @@ class CategoryDAO(context: Context) {
         return category
     }
 
-    fun update(category: Category) {
-        val db = databaseManager.writableDatabase
-
-        val values = ContentValues()
-        values.put(Category.COLUMN_NAME_NAME, category.name)
-
-        val updatedRows = db.update(Category.TABLE_NAME, values, "${BaseColumns._ID} = ${category.id}", null)
-        Log.i("DATABASE", "Updated records: $updatedRows")
-
-        db.close()
-    }
-
-    fun delete(category: Category) {
-        val db = databaseManager.writableDatabase
-
-        val deletedRows = db.delete(Category.TABLE_NAME, "${BaseColumns._ID} = ${category.id}", null)
-        Log.i("DATABASE", "Deleted rows: $deletedRows")
-
-        db.close()
-    }
+//    fun update(category: Category) {
+//        val db = databaseManager.writableDatabase
+//
+//        val values = ContentValues()
+//        values.put(Category.COLUMN_NAME_NAME, category.name)
+//
+//        val updatedRows = db.update(Category.TABLE_NAME, values, "${BaseColumns._ID} = ${category.id}", null)
+//        Log.i("DATABASE", "Updated records: $updatedRows")
+//
+//        db.close()
+//    }
+//
+//    fun delete(category: Category) {
+//        val db = databaseManager.writableDatabase
+//
+//        val deletedRows = db.delete(Category.TABLE_NAME, "${BaseColumns._ID} = ${category.id}", null)
+//        Log.i("DATABASE", "Deleted rows: $deletedRows")
+//
+//        db.close()
+//    }
 
 
     @SuppressLint("Range")

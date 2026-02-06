@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.example.tasklist.data.Category
 import com.example.tasklist.data.CategoryDAO
 import com.example.tasklist.data.Task
 import com.example.tasklist.data.TaskDAO

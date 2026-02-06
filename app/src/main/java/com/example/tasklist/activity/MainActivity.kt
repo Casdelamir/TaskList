@@ -3,9 +3,7 @@ package com.example.tasklist.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.tasklist.data.Category
 import com.example.tasklist.data.CategoryDAO
 import com.example.tasklist.data.Task
 import com.example.tasklist.data.TaskDAO

@@ -4,11 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.tasklist.R
 import com.example.tasklist.data.Category
 import com.example.tasklist.data.CategoryDAO
 import com.example.tasklist.databinding.ActivityCreateCategoryBinding
-import com.example.tasklist.databinding.ActivityTaskDetailBinding
 
 class CreateCategoryActivity : AppCompatActivity() {
 
